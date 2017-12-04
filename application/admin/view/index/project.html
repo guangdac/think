@@ -373,8 +373,10 @@ desired effect
               <table id="projectList" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>#</th>
-                  <th>序号</th>
+                  <th>
+                  <input type="checkbox" id='check-All' name="item" onclick="javascript:checkAll('item');"/>
+                  </th>
+                  <th>操作</th>
                   <th>项目名称</th>
                   <th>创建时间</th>
                   <th>简介</th>
@@ -382,120 +384,83 @@ desired effect
                 </thead>
                 <tbody>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>1</td>
                   <td>项目一</td>
                   <td>2017-10-09</td>
                   <td>简单描述备注1</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>2</td>
                   <td>项目二</td>
                   <td>2017-12-12</td>
                   <td>简单描述备注2</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>3</td>
                   <td>项目三</td>
                   <td>2017-12-09</td>
                   <td>简单描述备注3</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>1</td>
                   <td>项目一</td>
                   <td>2017-10-09</td>
                   <td>简单描述备注1</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>2</td>
                   <td>项目二</td>
                   <td>2017-12-12</td>
                   <td>简单描述备注2</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>3</td>
                   <td>项目三</td>
                   <td>2017-12-09</td>
                   <td>简单描述备注3</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>1</td>
                   <td>项目一</td>
                   <td>2017-10-09</td>
                   <td>简单描述备注1</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>2</td>
                   <td>项目二</td>
                   <td>2017-12-12</td>
                   <td>简单描述备注2</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>3</td>
                   <td>项目三</td>
                   <td>2017-12-09</td>
                   <td>简单描述备注3</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>1</td>
                   <td>项目一</td>
                   <td>2017-10-09</td>
                   <td>简单描述备注1</td>
                 </tr>
                 <tr>
-                  <td>#</td>
+                  <td><input name="item" type="checkbox"></td>
                   <td>2</td>
                   <td>项目二</td>
                   <td>2017-12-12</td>
                   <td>简单描述备注2</td>
-                </tr>
-                <tr>
-                  <td>#</td>
-                  <td>3</td>
-                  <td>项目三</td>
-                  <td>2017-12-09</td>
-                  <td>简单描述备注3</td>
-                </tr>
-                <tr>
-                  <td>#</td>
-                  <td>1</td>
-                  <td>项目一</td>
-                  <td>2017-10-09</td>
-                  <td>简单描述备注1</td>
-                </tr>
-                <tr>
-                  <td>#</td>
-                  <td>2</td>
-                  <td>项目二</td>
-                  <td>2017-12-12</td>
-                  <td>简单描述备注2</td>
-                </tr>
-                <tr>
-                  <td>#</td>
-                  <td>3</td>
-                  <td>项目三</td>
-                  <td>2017-12-09</td>
-                  <td>简单描述备注3</td>
                 </tr>
                 </tbody>
-                <tfoot>
-                <tr>
-                  <th>#</th>
-                  <th>序号</th>
-                  <th>文件夹名称</th>
-                  <th>创建时间</th>
-                  <th>简介</th>
-                </tr>
-                </tfoot>
               </table>
             </div>
             <!-- /.box-body -->
@@ -604,6 +569,31 @@ desired effect
 <!-- DataTables -->
 <script src="__PUBLIC__/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="__PUBLIC__/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript"> 
+    function checkAll(name) {
+      var flag=$("#check-All").is(':checked');
+      if(flag)
+      {
+        var el = document.getElementsByTagName('input');
+        var len = el.length;
+        for(var i=0; i<len; i++) {
+          if((el[i].type=="checkbox") && (el[i].name==name)) {
+          el[i].checked = true;
+          }
+        }
+      }
+      else {
+        var el = document.getElementsByTagName('input');
+        var len = el.length;
+        for(var i=0; i<len; i++) {
+          if((el[i].type=="checkbox") && (el[i].name==name)) {
+          el[i].checked = false;
+          }
+        }
+      }
+    }
+</script>
 
 <!-- page script -->
 <script>
