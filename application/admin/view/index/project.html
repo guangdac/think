@@ -385,77 +385,77 @@ desired effect
                 <tbody>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>1</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目一</td>
                   <td>2017-10-09</td>
                   <td>简单描述备注1</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>2</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目二</td>
                   <td>2017-12-12</td>
                   <td>简单描述备注2</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>3</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目三</td>
                   <td>2017-12-09</td>
                   <td>简单描述备注3</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>1</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目一</td>
                   <td>2017-10-09</td>
                   <td>简单描述备注1</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>2</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目二</td>
                   <td>2017-12-12</td>
                   <td>简单描述备注2</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>3</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目三</td>
                   <td>2017-12-09</td>
                   <td>简单描述备注3</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>1</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目一</td>
                   <td>2017-10-09</td>
                   <td>简单描述备注1</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>2</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目二</td>
                   <td>2017-12-12</td>
                   <td>简单描述备注2</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>3</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目三</td>
                   <td>2017-12-09</td>
                   <td>简单描述备注3</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>1</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目一</td>
                   <td>2017-10-09</td>
                   <td>简单描述备注1</td>
                 </tr>
                 <tr>
                   <td><input name="item" type="checkbox"></td>
-                  <td>2</td>
+                  <td><button type="submit" class="btn-info btn-sm" data-toggle="modal" data-target="#modal-del-project"><i class="fa fa-trash-o"></i> 删除</button></td>
                   <td>项目二</td>
                   <td>2017-12-12</td>
                   <td>简单描述备注2</td>
@@ -510,28 +510,31 @@ desired effect
       </div>
       <!-- /.modal -->
       
-      <!-- /.modal -->
-      <div class="modal modal-info fade" id="modal-del-project">
+      <div class="modal fade" id="modal-del-project">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header label-info">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title">删除项目</h4>
             </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline btn-sm" data-dismiss="modal">取消</button>
-              <button type="button" class="btn btn-outline btn-sm">确认</button>
-            </div>
+            <form role="form">
+              <div class="modal-body">
+                <div class="box-body">
+                慎重！确定要删除选中的记录吗？
+                </div>
+                <!-- /.box-body -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary btn-info btn-sm">确认</button>
+              </div>
+            </form>
           </div>
           <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
       </div>
-      <!-- /.modal -->
       
     </section>
     <!-- /.content -->
